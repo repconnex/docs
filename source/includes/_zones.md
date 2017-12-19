@@ -10,7 +10,7 @@ curl "https://repconnex.com/api/zones/15?token=mytoken"
 
 ```json
 {
-  "facility_id": 10,
+  "facility_id": 11,
   "parent_id": 9,
   "name": "Zone 1",
   "description": "East entrance to the hospital",
