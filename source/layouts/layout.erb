@@ -14,6 +14,7 @@ License for the specific language governing permissions and limitations
 under the License.
 %>
 <% language_tabs = current_page.data.language_tabs || [] %>
+<% main_nav_tab = current_page.data.main_nav_tab %>
 <% page_content = yield %>
 <%
   if current_page.data.includes
@@ -22,6 +23,23 @@ under the License.
     end
   end
 %>
+
+<% content_for :toc_content do %>
+  <% toc_data(page_content).each do |h1| %>
+    <li>
+      <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:content] %>"><%= h1[:content] %></a>
+      <% if h1[:children].length > 0 %>
+        <ul class="toc-list-h2">
+          <% h1[:children].each do |h2| %>
+            <li>
+              <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:content] %>"><%= h2[:content] %></a>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </li>
+  <% end %>
+<% end %>
 
 <!doctype html>
 <html>
@@ -68,22 +86,11 @@ under the License.
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
-      <% end %>
-      <div id="toc" class="toc-list-h1">
-        <% toc_data(page_content).each do |h1| %>
-          <li>
-            <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:content] %>"><%= h1[:content] %></a>
-            <% if h1[:children].length > 0 %>
-              <ul class="toc-list-h2">
-                <% h1[:children].each do |h2| %>
-                  <li>
-                    <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:content] %>"><%= h2[:content] %></a>
-                  </li>
-                <% end %>
-              </ul>
-            <% end %>
-          </li>
-        <% end %>
+      <% end %>      
+      <div id="toc" class="toc-list-h1">        
+        <li><a href='api.html'     class='toc-h0 toc-link'>API     </a></li><% if main_nav_tab == 'API'     %><%= toc_content(page_content) %><% end %>
+        <li><a href='kiosks.html'  class='toc-h0 toc-link'>Kiosks  </a></li><% if main_nav_tab == 'Kiosks'  %><%= toc_content(page_content) %><% end %>
+        <li><a href='website.html' class='toc-h0 toc-link'>Website </a></li><% if main_nav_tab == 'Website' %><%= toc_content(page_content) %><% end %>
       </div>
       <% if current_page.data.toc_footers %>
         <ul class="toc-footer">

@@ -18,8 +18,16 @@ $default: auto;
     #{right}: 0;
 }
 
-.toc-h2 {
+.toc-h0 {
+    font-size: 1.2em;    
+}
+
+.toc-h1 {
     padding-#{right}: $nav-padding + $nav-indent;
+}
+
+.toc-h2 {
+    padding-#{right}: $nav-padding + ($nav-indent * 2);
 }
 
 #nav-button {
