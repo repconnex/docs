@@ -1,0 +1,937 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Repconnex API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="api" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/green_logo_white.jpg" class="logo" alt="Green logo white" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">        
+        <li><a href='api.html'     class='toc-h0 toc-link'>API     </a></li><li><a href='#introduction' class='toc-h1 toc-link' data-title='Introduction'>Introduction</a>
+</li>
+<li><a href='#authentication' class='toc-h1 toc-link' data-title='Authentication'>Authentication</a>
+</li>
+<li><a href='#companies' class='toc-h1 toc-link' data-title='Companies'>Companies</a>
+<ul class='toc-list-h2'>
+<li><a href='#get-all-companies' class='toc-h2 toc-link' data-title='Get All Companies'>Get All Companies</a></li>
+<li><a href='#get-a-specific-company' class='toc-h2 toc-link' data-title='Get a Specific Company'>Get a Specific Company</a></li>
+</ul>
+</li>
+<li><a href='#credentials' class='toc-h1 toc-link' data-title='Credentials'>Credentials</a>
+<ul class='toc-list-h2'>
+<li><a href='#get-a-specific-credential' class='toc-h2 toc-link' data-title='Get a Specific Credential'>Get a Specific Credential</a></li>
+</ul>
+</li>
+<li><a href='#vendor-credentials' class='toc-h1 toc-link' data-title='Vendor Credentials'>Vendor Credentials</a>
+<ul class='toc-list-h2'>
+<li><a href='#get-all-vendor-credentials-for-a-vendor' class='toc-h2 toc-link' data-title='Get All Vendor Credentials for a Vendor'>Get All Vendor Credentials for a Vendor</a></li>
+<li><a href='#get-a-specific-vendor-credential' class='toc-h2 toc-link' data-title='Get a Specific Vendor Credential'>Get a Specific Vendor Credential</a></li>
+<li><a href='#update-a-specific-vendor-credential' class='toc-h2 toc-link' data-title='Update a Specific Vendor Credential'>Update a Specific Vendor Credential</a></li>
+</ul>
+</li>
+<li><a href='#vendors' class='toc-h1 toc-link' data-title='Vendors'>Vendors</a>
+<ul class='toc-list-h2'>
+<li><a href='#get-all-vendors' class='toc-h2 toc-link' data-title='Get All Vendors'>Get All Vendors</a></li>
+<li><a href='#get-a-specific-vendor' class='toc-h2 toc-link' data-title='Get a Specific Vendor'>Get a Specific Vendor</a></li>
+<li><a href='#update-a-specific-vendor' class='toc-h2 toc-link' data-title='Update a Specific Vendor'>Update a Specific Vendor</a></li>
+</ul>
+</li>
+<li><a href='#zones' class='toc-h1 toc-link' data-title='Zones'>Zones</a>
+<ul class='toc-list-h2'>
+<li><a href='#get-a-specific-zone' class='toc-h2 toc-link' data-title='Get a Specific Zone'>Get a Specific Zone</a></li>
+<li><a href='#check-whether-a-vendor-may-enter-a-zone' class='toc-h2 toc-link' data-title='Check whether a vendor may enter a zone'>Check whether a vendor may enter a zone</a></li>
+</ul>
+</li>
+<li><a href='#paging' class='toc-h1 toc-link' data-title='Paging'>Paging</a>
+</li>
+<li><a href='#searching' class='toc-h1 toc-link' data-title='Searching'>Searching</a>
+</li>
+
+        <li><a href='kiosks.html'  class='toc-h0 toc-link'>Kiosks  </a></li>
+        <li><a href='website.html' class='toc-h0 toc-link'>Website </a></li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Repconnex API! You can use our API to access Repconnex API endpoints.</p>
+
+<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+
+<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  -H <span class="s2">"Authorization: mytoken"</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>mytoken</code> with your API key.</p>
+</blockquote>
+
+<p>Repconnex uses API keys to allow access to the API. API keys must be passed out from an admin.</p>
+
+<p>Repconnex expects for the API key to be included in all API requests to the server in a querystring variable like the following:</p>
+
+<p><code>?token=mytoken</code></p>
+
+<aside class="notice">
+You must replace <code>mytoken</code> with your personal API key.
+</aside>
+<h1 id='companies'>Companies</h1><h2 id='get-all-companies'>Get All Companies</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/companies?token=mytoken"</span>  
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABZ Company"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1515 Oak Lane"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abzcompany.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ Company"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100 Ruby Ridge Drive"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"777-888-9999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xyz.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all companies.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/companies</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name_like</td>
+<td>null</td>
+<td>A partial search string to be used when matching the company name.</td>
+</tr>
+<tr>
+<td>address</td>
+<td>null</td>
+<td>A search string to be used when matching the company address.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>null</td>
+<td>A search string to be used when matching the company phone.</td>
+</tr>
+<tr>
+<td>website</td>
+<td>null</td>
+<td>A search string to be used when matching the company website.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>null</td>
+<td>A search string to be used when matching the company status.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-company'>Get a Specific Company</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/companies/2?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABZ Company"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1515 Oak Lane"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abzcompany.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific company.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/companies/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the company to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='credentials'>Credentials</h1><h2 id='get-a-specific-credential'>Get a Specific Credential</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/credentials/2?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Flu Shot Policy"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"form_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A policy outlining this facilitie's procedures for checking flu shots."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"credential_type"</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">1</span><span class="err">'</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"valid_for"</span><span class="p">:</span><span class="w"> </span><span class="err">'Ongoing'</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific credential.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/credentials/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the credential to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='vendor-credentials'>Vendor Credentials</h1>
+<p>A vendor credential is the fulfillment of a single credential for a single vendor.</p>
+<h2 id='get-all-vendor-credentials-for-a-vendor'>Get All Vendor Credentials for a Vendor</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors/23/credentials?token=mytoken"</span>  
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"credential_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"vendor_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Approved"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_due"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_valid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">        
+    </span><span class="s2">"date_expires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-01"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_reviewed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"declined_by_vendor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"json_data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"credential_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"vendor_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Approved"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_due"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_valid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">        
+    </span><span class="s2">"date_expires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-01"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_reviewed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"declined_by_vendor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"json_data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all vendor credentials for a specific vendor.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/vendors/&lt;vendor_id&gt;/credentials</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>vendor_id</td>
+<td>null</td>
+<td>The id for a vendor for whom to retrieve vendor credentials.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-vendor-credential'>Get a Specific Vendor Credential</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors/23/credentials/2?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"credential_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"vendor_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Approved"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"date_due"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"date_valid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">        
+  </span><span class="s2">"date_expires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"date_reviewed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"declined_by_vendor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"json_data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific credential.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/vendors/&lt;vendor_id&gt;/credentials/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>vendor_id</td>
+<td>The id of the vendor who owns the vendor credential</td>
+</tr>
+<tr>
+<td>id</td>
+<td>The id of the credential to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-specific-vendor-credential'>Update a Specific Vendor Credential</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors/23/credentials/2?token=mytoken"</span>
+  -X PUT
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Or if there was an error:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates a specific vendor credential.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT https://repconnex.com/api/vendors/&lt;vendor_id&gt;/credentials/&lt;id&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>vendor_id</td>
+<td>The id of the vendor who owns the vendor credential</td>
+</tr>
+<tr>
+<td>id</td>
+<td>The id of the credential to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='vendors'>Vendors</h1><h2 id='get-all-vendors'>Get All Vendors</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors?token=mytoken"</span>  
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">                        
+    </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">                    
+    </span><span class="s2">"vendor_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">                 
+    </span><span class="s2">"vendor_category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">             
+    </span><span class="s2">"supervisor_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"supervisor_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jdoe@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"supervisor_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"vc_manager_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bobsmith@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"primary_sales_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UT"</span><span class="p">,</span><span class="w">    
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Directory of Sales"</span><span class="p">,</span><span class="w">                          
+    </span><span class="s2">"territory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UT"</span><span class="p">,</span><span class="w">                    
+    </span><span class="s2">"authnet_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123"</span><span class="p">,</span><span class="w">             
+    </span><span class="s2">"authnet_payment_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xyz456"</span><span class="p">,</span><span class="w">             
+    </span><span class="s2">"valid_authnet_payment_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"card_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"card_suffix"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">                    
+    </span><span class="s2">"authnet_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def789"</span><span class="p">,</span><span class="w">                           
+    </span><span class="s2">"credentialing_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrubs_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">342</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"anniversary_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-30"</span><span class="p">,</span><span class="w">                             
+    </span><span class="s2">"federal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">              
+    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_top_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">                 
+    </span><span class="s2">"scrub_bottom_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">              
+    </span><span class="s2">"scrub_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span><span class="w">                        
+    </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">                    
+    </span><span class="s2">"vendor_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">                 
+    </span><span class="s2">"vendor_category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">             
+    </span><span class="s2">"supervisor_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"supervisor_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"janedoe@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"supervisor_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"333-333-3333"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"vc_manager_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"franksmith@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"primary_sales_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">    
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Director of Marketing"</span><span class="p">,</span><span class="w">                          
+    </span><span class="s2">"territory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">                    
+    </span><span class="s2">"authnet_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123"</span><span class="p">,</span><span class="w">             
+    </span><span class="s2">"authnet_payment_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xyz456"</span><span class="p">,</span><span class="w">             
+    </span><span class="s2">"valid_authnet_payment_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"card_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"card_suffix"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">                    
+    </span><span class="s2">"authnet_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def789"</span><span class="p">,</span><span class="w">                           
+    </span><span class="s2">"credentialing_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrubs_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">342</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"anniversary_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-30"</span><span class="p">,</span><span class="w">                             
+    </span><span class="s2">"federal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">              
+    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_top_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">                 
+    </span><span class="s2">"scrub_bottom_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">              
+    </span><span class="s2">"scrub_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all vendors.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/vendors</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>company_name_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s company name.</td>
+</tr>
+<tr>
+<td>first_name_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s first name.</td>
+</tr>
+<tr>
+<td>last_name_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s last name.</td>
+</tr>
+<tr>
+<td>email_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s email.</td>
+</tr>
+<tr>
+<td>phone_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s phone number.</td>
+</tr>
+<tr>
+<td>address_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s address.</td>
+</tr>
+<tr>
+<td>address2_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s address2.</td>
+</tr>
+<tr>
+<td>city_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s city.</td>
+</tr>
+<tr>
+<td>state_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s state.</td>
+</tr>
+<tr>
+<td>zip_like</td>
+<td>null</td>
+<td>A partial string to match the vendor&#39;s zip code.</td>
+</tr>
+<tr>
+<td>company_id</td>
+<td>null</td>
+<td>The vendor&#39;s company ID.</td>
+</tr>
+<tr>
+<td>credentialing_subscription_id_null</td>
+<td>null</td>
+<td>Whether or not the vendor&#39;s credentialing subscription id should be null.</td>
+</tr>
+<tr>
+<td>scrubs_subscription_id_null</td>
+<td>null</td>
+<td>Whether or not the vendor&#39;s scrubs subscription id should be null.</td>
+</tr>
+<tr>
+<td>credentialing_subscription_status</td>
+<td>null</td>
+<td>A string matching the vendor&#39;s credentialing subscription status.</td>
+</tr>
+<tr>
+<td>scrubs_subscription_status</td>
+<td>null</td>
+<td>A string matching the vendor&#39;s scrubs subscription status.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-vendor'>Get a Specific Vendor</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors/23?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">                        
+  </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">                    
+  </span><span class="s2">"vendor_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">                 
+  </span><span class="s2">"vendor_category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">             
+  </span><span class="s2">"supervisor_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"supervisor_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jdoe@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"supervisor_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"vc_manager_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bobsmith@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"primary_sales_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UT"</span><span class="p">,</span><span class="w">    
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Directory of Sales"</span><span class="p">,</span><span class="w">                          
+  </span><span class="s2">"territory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UT"</span><span class="p">,</span><span class="w">                    
+  </span><span class="s2">"authnet_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123"</span><span class="p">,</span><span class="w">             
+  </span><span class="s2">"authnet_payment_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xyz456"</span><span class="p">,</span><span class="w">             
+  </span><span class="s2">"valid_authnet_payment_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"card_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"card_suffix"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">                    
+  </span><span class="s2">"authnet_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def789"</span><span class="p">,</span><span class="w">                           
+  </span><span class="s2">"credentialing_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scrubs_subscription_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">342</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"anniversary_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-30"</span><span class="p">,</span><span class="w">                             
+  </span><span class="s2">"federal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">              
+  </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scrub_top_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">                 
+  </span><span class="s2">"scrub_bottom_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">              
+  </span><span class="s2">"scrub_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific vendor.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/vendors/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the vendor to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-specific-vendor'>Update a Specific Vendor</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors/23?token=mytoken"</span>
+  -X PUT
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Or if there was an error:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates a specific vendor.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT https://repconnex.com/api/vendors/&lt;vendor_id&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the credential to update</td>
+</tr>
+</tbody></table>
+<h1 id='zones'>Zones</h1><h2 id='get-a-specific-zone'>Get a Specific Zone</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/zones/15?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zone 1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"East entrance to the hospital"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific zone.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/zones/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the zone to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='check-whether-a-vendor-may-enter-a-zone'>Check whether a vendor may enter a zone</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/zones/15/vendors/23?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The vendor is not credentialed at the facility"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Or if there was an error:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint checks whether a vendor may enter a zone.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/zones/&lt;zone_id&gt;/vendors/&lt;vendor_id&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>zone_id</td>
+<td>The id of the zone</td>
+</tr>
+<tr>
+<td>vendor_id</td>
+<td>The id of the vendor</td>
+</tr>
+</tbody></table>
+<h1 id='paging'>Paging</h1>
+<p>All API calls that return a list use paging. Each API request may take the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>integer</td>
+<td>1</td>
+<td>The page of results to return.</td>
+</tr>
+<tr>
+<td>items_per_page</td>
+<td>integer</td>
+<td>100</td>
+<td>The number of items to be returned per page.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>string</td>
+<td>null</td>
+<td>The field upon which to sort the items.</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>boolean</td>
+<td>false</td>
+<td>Whether or not to sort the items in reverse order.</td>
+</tr>
+</tbody></table>
+
+<p>Each paged response will include the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pager</td>
+<td>Pager Object</td>
+<td>The pager object including all the paging fields.</td>
+</tr>
+<tr>
+<td>items</td>
+<td>Array</td>
+<td>The resulting page of items.</td>
+</tr>
+</tbody></table>
+<h1 id='searching'>Searching</h1>
+<p>Most API calls that include fields that filter results use suffixes to change the search functionality. Below is a list of suffixes and their uses: </p>
+
+<table><thead>
+<tr>
+<th>Suffix</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>_like</td>
+<td>Changes the field from an exact string search into a partial string search</td>
+</tr>
+<tr>
+<td>_gt</td>
+<td>Changes the field from an exact match to a greater than match.</td>
+</tr>
+<tr>
+<td>_gte</td>
+<td>Changes the field from an exact match to a greater than or equal match.</td>
+</tr>
+<tr>
+<td>_lt</td>
+<td>Changes the field from an exact match to a less than match.</td>
+</tr>
+<tr>
+<td>_lte</td>
+<td>Changes the field from an exact match to a less than or equal match.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Please note that every suffix is not available for every API field. This is just the architecture guide for searchable fields.
+</aside>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
