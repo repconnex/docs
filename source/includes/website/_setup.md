@@ -2,6 +2,17 @@
 
 To run the Repconnex website locally, you'll need to first set up your environment.
 
+## IDE
+
+You can use whatever IDE you'd like to use. Here are a few of the common ones:
+
+Sublime
+RubyMine
+Atom
+jEdit
+VIM
+Aptana
+
 ## Install ruby
 
 ```shell
