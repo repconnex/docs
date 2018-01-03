@@ -1,4 +1,7 @@
 # Vending Machine
+
+## Hardware
+
 <table>
   <tr>
     <th>Item</th>
@@ -24,7 +27,7 @@
   </tr>
 </table>
 
-# Graphics
+## Graphics
 
 Each vending machine has an opening where the original control hardware was located. This opening is 6.5" wide by 29" tall.
 

@@ -1,5 +1,7 @@
 # Kiosk
 
+## Hardware
+
 <table>
   <tr>
     <th>Item</th>
