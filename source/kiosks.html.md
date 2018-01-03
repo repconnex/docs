@@ -8,7 +8,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
   
 includes:
   - kiosks/introduction
-  - kiosks/hardware
+  - kiosks/kiosk
+  - kiosks/vending_machine
 
 search: true
 ---
