@@ -17,3 +17,9 @@ Each vending machine has an opening where the original control hardware was loca
 If the kiosk hardware is housed separately from the vending machine, then a rigid board with graphics must be created to close the opening.
 
 If the kiosk hardware is housed inside the vending machine, then the ipad will take up some of the opening space, but a rigid board with graphics must be created to close the rest of the opening.
+
+### Scrubs Inventory
+
+Once Scrubs are purchased in bulk, they need to be unpackaged, folded into the correct dimensions, and put into the appropriately sized bag in order to fit into the vending machine. Optionally, the bag then needs to be stickered with the company's logo.
+
+<a href='https://www.amazon.com/gp/product/B00JKTSINS'>Matte-finishe, white poly mailer bags 6" x 9"</a>
