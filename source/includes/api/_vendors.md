@@ -37,7 +37,7 @@ curl "https://repconnex.com/api/vendors?token=mytoken"
     "scrub_top_size": "M",                 
     "scrub_bottom_size": "M",              
     "scrub_color": "blue",
-    "qr_code": null
+    "qr_code": null    
   },
   {
     "id": 24,
@@ -66,7 +66,7 @@ curl "https://repconnex.com/api/vendors?token=mytoken"
     "scrub_top_size": "M",                 
     "scrub_bottom_size": "M",              
     "scrub_color": "blue",
-    "qr_code": null
+    "qr_code": null    
   }
 ]
 ```
@@ -133,7 +133,8 @@ curl "https://repconnex.com/api/vendors/23?token=mytoken"
   "scrub_top_size": "M",                 
   "scrub_bottom_size": "M",              
   "scrub_color": "blue",
-  "qr_code": null
+  "qr_code": null,
+  "target_facilities": null
 }
 ```
 
