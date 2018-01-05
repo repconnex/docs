@@ -36,7 +36,8 @@ curl "https://repconnex.com/api/vendors?token=mytoken"
     "notes": null,
     "scrub_top_size": "M",                 
     "scrub_bottom_size": "M",              
-    "scrub_color": "blue"
+    "scrub_color": "blue",
+    "qr_code": null
   },
   {
     "id": 24,
@@ -64,7 +65,8 @@ curl "https://repconnex.com/api/vendors?token=mytoken"
     "notes": null,
     "scrub_top_size": "M",                 
     "scrub_bottom_size": "M",              
-    "scrub_color": "blue"
+    "scrub_color": "blue",
+    "qr_code": null
   }
 ]
 ```
@@ -130,7 +132,8 @@ curl "https://repconnex.com/api/vendors/23?token=mytoken"
   "notes": null,
   "scrub_top_size": "M",                 
   "scrub_bottom_size": "M",              
-  "scrub_color": "blue"
+  "scrub_color": "blue",
+  "qr_code": null
 }
 ```
 
@@ -180,3 +183,4 @@ This endpoint updates a specific vendor.
 Parameter | Description
 --------- | -----------
 id | The id of the credential to update
+qr_code | The new QR code for the vendor
