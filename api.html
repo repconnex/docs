@@ -240,6 +240,11 @@
 <li><a href='#get-a-specific-company' class='toc-h2 toc-link' data-title='Get a Specific Company'>Get a Specific Company</a></li>
 </ul>
 </li>
+<li><a href='#target-facilities' class='toc-h1 toc-link' data-title='Target Facilities'>Target Facilities</a>
+<ul class='toc-list-h2'>
+<li><a href='#the-target-facility-object' class='toc-h2 toc-link' data-title='The Target Facility Object'>The Target Facility Object</a></li>
+</ul>
+</li>
 <li><a href='#vendor-credentials' class='toc-h1 toc-link' data-title='Vendor Credentials'>Vendor Credentials</a>
 <ul class='toc-list-h2'>
 <li><a href='#get-all-vendor-credentials-for-a-vendor' class='toc-h2 toc-link' data-title='Get All Vendor Credentials for a Vendor'>Get All Vendor Credentials for a Vendor</a></li>
@@ -600,6 +605,43 @@ You must replace <code>mytoken</code> with your personal API key.
 <tr>
 <td>id</td>
 <td>The id of the facility to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='target-facilities'>Target Facilities</h1>
+<p>The target facility object ties a vendor and a facility together and store information related to the vendor&#39;s association at that facility.</p>
+
+<p>When a vendor is retrieved, an array of target facility objects is returned in the result.</p>
+<h2 id='the-target-facility-object'>The Target Facility Object</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors/&lt;vendor_id&gt;?token=mytoken"</span>  
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"vendor_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Approved"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"contracted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scrub_credits"</span><span class="p">:</span><span class="w"> </span><span class="mi">145</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scrub_variant_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"auto_purchase_scrubs"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='statuses'>Statuses</h3>
+<p>The status field is an enumerated string with the following possiblue values:</p>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Approved</td>
+<td>The vendor is approved at the facility.</td>
+</tr>
+<tr>
+<td>Unapproved</td>
+<td>The vendor is not approved at the facility.</td>
 </tr>
 </tbody></table>
 <h1 id='vendor-credentials'>Vendor Credentials</h1>
