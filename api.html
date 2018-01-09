@@ -234,6 +234,12 @@
 <li><a href='#get-a-specific-credential' class='toc-h2 toc-link' data-title='Get a Specific Credential'>Get a Specific Credential</a></li>
 </ul>
 </li>
+<li><a href='#facilities' class='toc-h1 toc-link' data-title='Facilities'>Facilities</a>
+<ul class='toc-list-h2'>
+<li><a href='#get-all-facilities' class='toc-h2 toc-link' data-title='Get All Facilities'>Get All Facilities</a></li>
+<li><a href='#get-a-specific-company' class='toc-h2 toc-link' data-title='Get a Specific Company'>Get a Specific Company</a></li>
+</ul>
+</li>
 <li><a href='#vendor-credentials' class='toc-h1 toc-link' data-title='Vendor Credentials'>Vendor Credentials</a>
 <ul class='toc-list-h2'>
 <li><a href='#get-all-vendor-credentials-for-a-vendor' class='toc-h2 toc-link' data-title='Get All Vendor Credentials for a Vendor'>Get All Vendor Credentials for a Vendor</a></li>
@@ -412,6 +418,188 @@ You must replace <code>mytoken</code> with your personal API key.
 <tr>
 <td>id</td>
 <td>The id of the credential to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='facilities'>Facilities</h1><h2 id='get-all-facilities'>Get All Facilities</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities?token=mytoken"</span>  
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"facility_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contact_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">        
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Big Hospital"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1515 Oak Lane"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New York City"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jdoe@bighospital.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bighospital.com"</span><span class="p">,</span><span class="w">          
+    </span><span class="s2">"allow_food"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">  
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"utc_offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">-5</span><span class="w">
+    </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Central Time (US &amp; Canada)"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"standing_appt_period"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">  
+    </span><span class="s2">"uses_credentialing"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uses_scrubs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uses_value_analysis"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_shirts_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_pants_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_packages_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"show_on_website"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">          
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"facility_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contact_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">        
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Big Hospital 2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1515 Oak Lane"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New York City"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jdoe@bighospital.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bighospital.com"</span><span class="p">,</span><span class="w">          
+    </span><span class="s2">"allow_food"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">  
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"utc_offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">-5</span><span class="w">
+    </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Central Time (US &amp; Canada)"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"standing_appt_period"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">  
+    </span><span class="s2">"uses_credentialing"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uses_scrubs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uses_value_analysis"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_shirts_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_pants_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scrub_packages_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"show_on_website"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">          
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all facilities.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/facilities</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>system_id</td>
+<td>null</td>
+<td>The system id the facility belongs to.</td>
+</tr>
+<tr>
+<td>facility_type_id</td>
+<td>null</td>
+<td>The facility type ID of the facility.</td>
+</tr>
+<tr>
+<td>name_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility name.</td>
+</tr>
+<tr>
+<td>address_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility address.</td>
+</tr>
+<tr>
+<td>city_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility city.</td>
+</tr>
+<tr>
+<td>state_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility state.</td>
+</tr>
+<tr>
+<td>zip_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility zip code.</td>
+</tr>
+<tr>
+<td>email_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility email.</td>
+</tr>
+<tr>
+<td>phone_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility phone number.</td>
+</tr>
+<tr>
+<td>fax_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility fax.</td>
+</tr>
+<tr>
+<td>website_like</td>
+<td>null</td>
+<td>A search string to be used when matching the facility website.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>null</td>
+<td>The status of the facility.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-company'>Get a Specific Company</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities/2?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"system_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"facility_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"contact_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">        
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Big Hospital"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1515 Oak Lane"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New York City"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jdoe@bighospital.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bighospital.com"</span><span class="p">,</span><span class="w">          
+  </span><span class="s2">"allow_food"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"utc_offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">-5</span><span class="w">
+  </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Central Time (US &amp; Canada)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"standing_appt_period"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"uses_credentialing"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"uses_scrubs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"uses_value_analysis"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scrub_shirts_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scrub_pants_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scrub_packages_product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"show_on_website"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">          
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific facility.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/facilities/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the facility to retrieve</td>
 </tr>
 </tbody></table>
 <h1 id='vendor-credentials'>Vendor Credentials</h1>
