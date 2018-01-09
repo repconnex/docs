@@ -32,4 +32,4 @@ The status field is an enumerated string with the following possiblue values:
 Value | Meaning
 ----- | -------
 Approved | The vendor is approved at the facility.
-Unapproved | The vendor is not approved at the facility.
+Pending | The vendor is not approved at the facility, pending either an upload of a credential or a review of an already uploaded credential.
