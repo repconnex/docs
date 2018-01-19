@@ -17,6 +17,7 @@ includes:
   - api/credentials
   - api/facilities
   - api/target_facilities
+  - api/users
   - api/vendor_credentials
   - api/vendors
   - api/zones
