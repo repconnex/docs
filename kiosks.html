@@ -271,28 +271,104 @@
 <table><thead>
 <tr>
 <th>Item</th>
+<th>Qty</th>
 <th>Purpose</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>AMS Slim Gem (G8624S3C#163)<br/><a href='http://thevendingcenter.com/'>website</a></td>
+<td><a href='http://thevendingcenter.com/'>AMS Slim Gem (G8624S3C#163)</a></td>
+<td>1</td>
 <td>The vending machine itself.</td>
 </tr>
 <tr>
-<td>7 Snack trays, deeper spirals.<br/><a href='http://thevendingcenter.com/'>website</a></td>
+<td><a href='http://thevendingcenter.com/'>Snack trays, deeper spirals</a></td>
+<td>1</td>
 <td></td>
 </tr>
 <tr>
-<td>Upstate Networks MDB2PC<br/><a href='http://www.upstatenetworks.com/mdb2pc.htm'>website</a></td>
+<td><a href='http://www.upstatenetworks.com/mdb2pc.htm'>Upstate Networks MDB2PC</a></td>
+<td>1</td>
 <td>Allows vending machine to receive RS232 commands.</td>
 </tr>
 <tr>
-<td>Airconsole Mini<br/><a href='https://www.get-console.com/shop/en/airconsole-mini-20/112-airconsole-20-mini.html'>website</a></td>
+<td><a href='https://www.get-console.com/shop/en/airconsole-mini-20/112-airconsole-20-mini.html'>Airconsole Mini</a></td>
+<td>1</td>
 <td>Connects the vending machine to the network.</td>
 </tr>
 <tr>
-<td>Power strip</td>
+<td>iPad (9.7&quot; iPad or iPad Air)</td>
+<td>1</td>
+<td>Main interface</td>
+</tr>
+<tr>
+<td><a href='https://www.amazon.com/DYMO-LabelWriter-Thermal-Printer-1750283/dp/B0027JIIKQ'>Dymo printer (LabelWriter 450 Turbo)</a></td>
+<td>1</td>
+<td>Printer for badge labels</td>
+</tr>
+<tr>
+<td><a href='https://www.apple.com/airport-express/'>Apple Airport router (Express)</a></td>
+<td>1</td>
+<td>Connects the ipad and vending machine to the network</td>
+</tr>
+<tr>
+<td><a href='https://www.bestbuy.com/site/wemo-wemo-insight-plug-white-gray/2300063.p'>Wemo power switch</a></td>
+<td>1</td>
+<td>Allows us to hard reset everything remotely</td>
+</tr>
+<tr>
+<td>Generic power strip</td>
+<td>1</td>
 <td></td>
+</tr>
+<tr>
+<td><a href='https://www.amazon.com/gp/product/B002HVYVNC'>Power cord to PC connector adapter</a></td>
+<td>1</td>
+<td>Connects the power strip to the internal vending machine power</td>
+</tr>
+<tr>
+<td>3-wire 8&#39; extension cord</td>
+<td>2</td>
+<td>Used to get power from the main power strip to the door assembly and interior assembly</td>
+</tr>
+<tr>
+<td>50&#39; ethernet cable</td>
+<td>1</td>
+<td>Used to connect the router to the network</td>
+</tr>
+<tr>
+<td>25&#39; ethernet cable</td>
+<td>1</td>
+<td>Used to connect the router to the airconsole mini</td>
+</tr>
+<tr>
+<td>34&quot; x 7&quot; x 1/2&quot; wooden panel</td>
+<td>1</td>
+<td>Used to cover cavity from original vending machine controls</td>
+</tr>
+<tr>
+<td>1&quot; velcro strips</td>
+<td>1</td>
+<td>Used throughout assembly</td>
+</tr>
+<tr>
+<td>1&quot; hinge</td>
+<td>2</td>
+<td>Used to hold the printer shelf to the wooden panel</td>
+</tr>
+<tr>
+<td>12&quot; small chain</td>
+<td>1</td>
+<td>Used to keep the printer shelf at the appropriate angle</td>
+</tr>
+<tr>
+<td>Small hook</td>
+<td>1</td>
+<td>Used to attach the chain to the wooden panel</td>
+</tr>
+<tr>
+<td>Small screw eyehook</td>
+<td>1</td>
+<td>Used to attach the chain to the printer shelf</td>
 </tr>
 </tbody></table>
 <h2 id='graphics'>Graphics</h2>
@@ -305,6 +381,119 @@
 <p>Once Scrubs are purchased in bulk, they need to be unpackaged, folded into the correct dimensions, and put into the appropriately sized bag in order to fit into the vending machine. Optionally, the bag then needs to be stickered with the company&#39;s logo.</p>
 
 <p><a href='https://www.amazon.com/gp/product/B00JKTSINS'>Matte-finishe, white poly mailer bags 6&quot; x 9&quot;</a></p>
+<h3 id='wiring-diagram'>Wiring Diagram</h3>
+<p><img src='images/vending_machine_wiring.png' /></p>
+<h3 id='setup'>Setup</h3>
+<p>Help videos:</p>
+
+<ul>
+<li><a href='https://youtu.be/AbkOXM3i-ng'>Before setup, general overview</a></li>
+<li><a href='https://youtu.be/4_lpngqCIdY'>After removing normal vending machine controls</a></li>
+<li><a href='https://youtu.be/6S2AnRL4NfQ'>After setup, finished wiring and mounting hardware</a></li>
+<li><a href='https://youtu.be/1bKZ099j6Mg'>Special note about power to vending machine</a></li>
+</ul>
+
+<p>Instructions:</p>
+
+<ol>
+<li>Remove uneccesary parts.
+
+<ul>
+<li>Remove the plastic exterior piece with the number pad and anything attached to it except the small display and number pad board (both of which are attached via ribbon cables to the control board). Leave the display and number pad hanging for the time being.</li>
+<li>Remove the metal change mechanism located on the inside of the machine. This will not be used and just takes up room.</li>
+<li>Remove the interior metal door (despite what the video shows). This door is no longer necessary since we&#39;re using a wood panel to cover the hole left by the removal of the normal vending machine controls.
+
+<ul>
+<li>Unplug the two connectors that go to the switch at the top of the door.</li>
+<li>Remove the door and hinges.</li>
+<li>Remove the switch from the door.</li>
+<li>Use a rubber band to permanently keep the switch in a closed position.</li>
+<li>Reattach the two connectors to the switch and leave hanging.<br></li>
+</ul></li>
+</ul></li>
+<li>Replace main power strip (<a href='https://youtu.be/1bKZ099j6Mg'>video</a>).
+
+<ul>
+<li>Remove the power cable that enters the back of the vending machine. 
+
+<ul>
+<li>At the bottom of the machine on the inside, unplug the cable from the vending machine. This should be a PC connector.</li>
+<li>Remove both the interior and exterior panels that keep the power cable in place.</li>
+<li>Remove the power cable completely.</li>
+</ul></li>
+<li>Insert the new power strip into the open hole where the previous power strip was.</li>
+<li>Connect the power strip to the vending machine with the PC to power cord connector.</li>
+<li>Plug the power strip into the wall.</li>
+<li>Turn on the vending machine to verify power works.</li>
+</ul></li>
+<li>Attach shelf to wooden panel.
+
+<ul>
+<li>Screw one half of both 1&quot; hinges to the wooden shelf. </li>
+<li>Locate the wooden shelf so that the printer prints out badges through the slot easily.</li>
+<li>Connect the other half of both 1&quot; hinges to the wooden panel.</li>
+<li>From the interior of the door looking at the wooden shelf, screw the small eyehook into the back right side of the shelf.</li>
+<li>From the interior of the door looking at the wooden shelf, screw the small hook into the wooden panel roughly 10-12&quot; above the shelf.</li>
+<li>Place the dymo printer on the shelf and verify badges exit the printer into the slot correctly.</li>
+<li>Connect the chain from the eyehook on the shelf to the hook on the wooden panel.</li>
+</ul></li>
+<li>Attach wooden panel to door.
+
+<ul>
+<li>Cut 34&quot; velcro strip, cut vertically in half creating two 1/2&quot; strips of velcro.</li>
+<li>Attach one half of velcro strips to left and right sides of the wooden panel on the opposite side of the printer shelf.</li>
+<li>Attach other half of velcro strips to the interior of door just outside the left and right sides of the hole.</li>
+<li>Press wooden panel to hole so the velcro secures into place.</li>
+</ul></li>
+<li>Mount the airport express.
+
+<ul>
+<li>Below the wooden panel on the interior of the door, locate the airport express so that cables can exit the back of the router from the left side.</li>
+<li>Attach velcro to the airport express and press onto the metal.</li>
+</ul></li>
+<li>Mount the door extension cord.
+
+<ul>
+<li>Locate the end of the extension cord just above the change assembly at the bottom of the door.</li>
+<li>Attach velcro to the head of the extension cord and press onto the metal.</li>
+</ul></li>
+<li>Attach ethernet cables.
+
+<ul>
+<li>Plug the 50&#39; ethernet cable into the WAN side of the airport express.</li>
+<li>Plug the 25&#39; ethernet cable into the LAN side of the airport express.</li>
+<li>Run the 50&#39; ethernet cable down the bottom of the door through to the bottom of the vending machine and out the back of the vending machine with the power strip cord.</li>
+<li>Run the 25&#39; ethernet cable down the bottom of the door to the left cavity of the vending machine then through the small opening at the bottom of the machine to right cavity of the vending machine.</li>
+</ul></li>
+<li>Run power to the right cavity of the vending machine.
+
+<ul>
+<li>Inside the right cavity of the vending machine, locate the hole through which all the cables from the trays pass.</li>
+<li>Drop the power side of the extension cord down through this hole, it should drop all the way to the bottom of the vending machine where the main power strip is.</li>
+<li>Plug the extension cord into the power strip.</li>
+<li>Leave the plug side of the extension cord just hanging through the hole. It&#39;s neat as is and doesn&#39;t require mounting.</li>
+</ul></li>
+<li>Test the tray spirals.
+
+<ul>
+<li>Turn the vending machine on using the switch located inside the right cavity.</li>
+<li>Using the number pad hanging inside the right cavity, press one of the numbers on the trays.</li>
+<li>Verify that the spiral turns.</li>
+<li>If the spiral turns, turn off the vending machine and remove the number pad and ribbon cable from the control board.</li>
+</ul></li>
+<li>Mount the right cavity hardware.
+
+<ul>
+<li>Take the display that&#39;s hanging inside the cavitory and mount to the top, back of the cavity using velcro strips.</li>
+<li>Remove the mounting screws from the MDB2PC board.</li>
+<li>Mount the MDB2PC board to the left side of the cavity making sure to use plenty of velcro strips to ensure that no metal touches the metal of the vending machine.</li>
+<li>Connect the MDB2PC board to the main AMS control board using the hanging MDB plug.</li>
+<li>Connect the serial to RJ45 adapter to the MDB2PC board.</li>
+<li>Connect the airconsole mini to the RJ45 adapter.</li>
+<li>Mount the airconsole mino under the MDB2PC board using velcro strips.</li>
+<li>Connect the ethernet cable that was previously run from the airport express to the airconsole mini.</li>
+</ul></li>
+</ol>
 
       </div>
       <div class="dark-box">
