@@ -11,6 +11,8 @@
 | iPad (9.7" iPad or iPad Air) | 1 | Main interface |
 | <a href='https://www.amazon.com/DYMO-LabelWriter-Thermal-Printer-1750283/dp/B0027JIIKQ'>Dymo printer (LabelWriter 450 Turbo)</a> | 1 | Printer for badge labels |
 | <a href='https://www.apple.com/airport-express/'>Apple Airport router (Express)</a> | 1 | Connects the ipad and vending machine to the network |
+| <a href='https://www.amazon.com/gp/product/B01F2O3CKI'>iPad Security Mount</a> | 1 | Used to hold the iPad |
+| <a href='https://www.amazon.com/gp/product/B01ACOR2PE'>Tilting wall bracket</a> | 1 | Used to attach the ipad to the wooden panel and to allow the ipad to tilt up and down for easy viewing |
 | <a href='https://www.bestbuy.com/site/wemo-wemo-insight-plug-white-gray/2300063.p'>Wemo power switch</a> | 1 | Allows us to hard reset everything remotely |
 | Generic power strip | 1 |  |
 | <a href='https://www.amazon.com/gp/product/B002HVYVNC'>Power cord to PC connector adapter</a> | 1 | Connects the power strip to the internal vending machine power |
