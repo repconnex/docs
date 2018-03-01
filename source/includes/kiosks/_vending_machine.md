@@ -115,8 +115,22 @@ Instructions:
   * Connect the airconsole mini to the PC2ASD board using the USB cable.
   * Mount the airconsole mino under the PC2ASD board using velcro strips.
   * Connect the ethernet cable that was previously run from the airport express to the airconsole mini.
+  
+## Airport Express
+
+The airport express router connects all of the components within the kiosk and vending machine. It needs to be configured with a known subnet and WIFI name.
+
+1. Open the Airport Utility app.
+2. Edit the airport express router for the kiosk.
+2. Configure DCHP to serve DCHP addresses from `10.0.1.50` to `10.0.1.200`.
+3. Change the WIFI name to `RepconnexKiosk<kiosk_id>`. (Example: RepconnexKiosk121)
+4. Change the WIFI password to our known password.
 
 ## Airconsole Mini
+
+The airconsole mini acts as an interface between the network and the Upstate board, allowing us to send RS232 commands through the network.
+
+Out of the box, the airconsole mini is configured with a `196.168` IP address which needs to be changed.
 
 1. Open Airport Utility and edit the kiosk router.
 2. Under the "Internet" tab, configure DHCP to serve addresses from `192.168.10.50` to `192.168.10.200`.
@@ -133,11 +147,12 @@ Instructions:
 
 ## "Free Vend" mode
 
-1. Put vending machine in “Free Vend” mode.
-2. Plug in number pad to control board (or use the ipad app).
-3. Open door hinge switch.
-4. Press service mode button to enter service mode.
-5. Press “#” to scroll through menu until “FREE VEND” is reached.
-6. Press “1” to VIEW / EDIT and then to toggle between Y and N.
-7. Press “#” to Save the setting and exit.
-8. Close door hinge switch.
+The vending machine needs to be put into "Free Vend" mode. This mode allows the vending machine to vend any spiral for which is receives a command.
+
+1. Plug in number pad to control board (or use the ipad app).
+2. Open door hinge switch.
+3. Press service mode button to enter service mode.
+4. Press “#” to scroll through menu until “FREE VEND” is reached.
+5. Press “1” to VIEW / EDIT and then to toggle between Y and N.
+6. Press “#” to Save the setting and exit.
+7. Close door hinge switch.
