@@ -6,7 +6,7 @@
 | ---- | --- | ------- |
 | <a href='http://thevendingcenter.com/'>AMS Slim Gem (G8624S3C#163)</a> | 1 | The vending machine itself. |	
 | <a href='http://thevendingcenter.com/'>Snack trays, deeper spirals</a> | 1 |
-| <a href='http://www.upstatenetworks.com/mdb2pc.htm'>Upstate Networks MDB2PC</a> | 1 | Allows vending machine to receive RS232 commands. |
+| <a href='http://www.upstatenetworks.com/uniCart/catalog/product_info.php?products_id=34'>Upstate Networks PC2ASD</a> | 1 | Allows vending machine to receive RS232 commands. |
 | <a href='https://www.get-console.com/shop/en/airconsole-mini-20/112-airconsole-20-mini.html'>Airconsole Mini</a> | 1 | Connects the vending machine to the network. |
 | iPad (9.7" iPad or iPad Air) | 1 | Main interface |
 | <a href='https://www.amazon.com/DYMO-LabelWriter-Thermal-Printer-1750283/dp/B0027JIIKQ'>Dymo printer (LabelWriter 450 Turbo)</a> | 1 | Printer for badge labels |
@@ -109,15 +109,14 @@ Instructions:
   * If the spiral turns, turn off the vending machine and remove the number pad and ribbon cable from the control board.
 10. Mount the right cavity hardware.
   * Take the display that's hanging inside the cavitory and mount to the top, back of the cavity using velcro strips.
-  * Remove the mounting screws from the MDB2PC board.
-  * Mount the MDB2PC board to the left side of the cavity making sure to use plenty of velcro strips to ensure that no metal touches the metal of the vending machine.
-  * Connect the MDB2PC board to the main AMS control board using the hanging MDB plug.
-  * Connect the serial to RJ45 adapter to the MDB2PC board.
-  * Connect the airconsole mini to the RJ45 adapter.
-  * Mount the airconsole mino under the MDB2PC board using velcro strips.
+  * Remove the mounting screws from the PC2ASD board.
+  * Mount the PC2ASD board to the left side of the cavity making sure to use plenty of velcro strips to ensure that no metal touches the metal of the vending machine.
+  * Connect the PC2ASD board to the main AMS control board using the number pad ribbon cable.
+  * Connect the airconsole mini to the PC2ASD board using the USB cable.
+  * Mount the airconsole mino under the PC2ASD board using velcro strips.
   * Connect the ethernet cable that was previously run from the airport express to the airconsole mini.
 
-## Airconsole Mini Set Instructions
+## Airconsole Mini
 
 1. Open Airport Utility and edit the kiosk router.
 2. Under the "Internet" tab, configure DHCP to serve addresses from `192.168.10.50` to `192.168.10.200`.
@@ -132,7 +131,7 @@ Instructions:
 6. Under the "Internet" tab, configure DHCP to serve addresses from `10.0.1.50` to `10.0.1.200`.
 7. Open `http://10.0.1.10` in the browser to confirm the airconsole mini has the correct address.
 
-## Put the Vending Machine is "Free Vend" mode
+## "Free Vend" mode
 
 1. Put vending machine in “Free Vend” mode.
 2. Plug in number pad to control board (or use the ipad app).
