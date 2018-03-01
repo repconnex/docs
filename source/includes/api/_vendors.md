@@ -185,3 +185,49 @@ Parameter | Description
 --------- | -----------
 id | The id of the credential to update
 qr_code | The new QR code for the vendor
+
+## Send Sample Webhooks
+
+```shell
+curl "https://repconnex.com/api/vendors/23/post-green-webhook?token=mytoken&webhook=hard_badge_credential_updated"
+  -X POST
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "success": true,
+}
+```
+
+> Or if there was an error:
+
+```json
+{
+  "error": "Explanation of error"
+}
+```
+
+This endpoint sends a sample webhook to the green web service.
+
+### HTTP Request
+
+`POST https://repconnex.com/api/vendors/<vendor_id>/post-green-webhook`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+id | The id of the credential to update
+webhook | The webhook that should be called
+
+### Webhooks available
+
+Webhook | Description
+--------- | -----------
+hard_badge_credential_uploaded | Triggered when the hard badge credential is uploaded
+hard_badge_credential_approved | Triggered when the hard badge credential is approved
+background_check_credential_uploaded | Triggered when the background check credential is uploaded
+background_check_credential_approved | Triggered when the background check credential is uploaded
+vendor_ssn | Triggered when the vendor enters a social security number

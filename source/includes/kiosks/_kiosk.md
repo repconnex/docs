@@ -11,8 +11,7 @@
 
 ## Setup
 
-1. Install the Repconnex Kiosk app on the ipad.
+1. Install the Green Kiosk app on the ipad.
 2. Open the app.
-3. Open the admin section by tapping five times in the lower, right-hand corner of the screen.
-4. Log in as a facility admin for that facility.
-5. Click the "Select Kiosk" button and select the appropriate kiosk for which the device will act.
+3. Log in as a facility admin for that facility.
+4. Click the "Select Kiosk" button and select the appropriate kiosk for which the device will act.
