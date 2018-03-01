@@ -234,6 +234,7 @@
 <li><a href='#graphics' class='toc-h2 toc-link' data-title='Graphics'>Graphics</a></li>
 <li><a href='#scrubs-inventory' class='toc-h2 toc-link' data-title='Scrubs Inventory'>Scrubs Inventory</a></li>
 <li><a href='#setup' class='toc-h2 toc-link' data-title='Setup'>Setup</a></li>
+<li><a href='#airport-express' class='toc-h2 toc-link' data-title='Airport Express'>Airport Express</a></li>
 <li><a href='#airconsole-mini' class='toc-h2 toc-link' data-title='Airconsole Mini'>Airconsole Mini</a></li>
 <li><a href='#quot-free-vend-quot-mode' class='toc-h2 toc-link' data-title='"Free Vend" mode'>"Free Vend" mode</a></li>
 </ul>
@@ -496,7 +497,21 @@
 <li>Connect the ethernet cable that was previously run from the airport express to the airconsole mini.</li>
 </ul></li>
 </ol>
+<h2 id='airport-express'>Airport Express</h2>
+<p>The airport express router connects all of the components within the kiosk and vending machine. It needs to be configured with a known subnet and WIFI name.</p>
+
+<ol>
+<li>Open the Airport Utility app.</li>
+<li>Edit the airport express router for the kiosk.</li>
+<li>Configure DCHP to serve DCHP addresses from <code>10.0.1.50</code> to <code>10.0.1.200</code>.</li>
+<li>Change the WIFI name to <code>RepconnexKiosk&lt;kiosk_id&gt;</code>. (Example: RepconnexKiosk121)</li>
+<li>Change the WIFI password to our known password.</li>
+</ol>
 <h2 id='airconsole-mini'>Airconsole Mini</h2>
+<p>The airconsole mini acts as an interface between the network and the Upstate board, allowing us to send RS232 commands through the network.</p>
+
+<p>Out of the box, the airconsole mini is configured with a <code>196.168</code> IP address which needs to be changed.</p>
+
 <ol>
 <li>Open Airport Utility and edit the kiosk router.</li>
 <li>Under the &quot;Internet&quot; tab, configure DHCP to serve addresses from <code>192.168.10.50</code> to <code>192.168.10.200</code>.</li>
@@ -515,8 +530,9 @@
 <li>Open <code>http://10.0.1.10</code> in the browser to confirm the airconsole mini has the correct address.</li>
 </ol>
 <h2 id='quot-free-vend-quot-mode'>&quot;Free Vend&quot; mode</h2>
+<p>The vending machine needs to be put into &quot;Free Vend&quot; mode. This mode allows the vending machine to vend any spiral for which is receives a command.</p>
+
 <ol>
-<li>Put vending machine in “Free Vend” mode.</li>
 <li>Plug in number pad to control board (or use the ipad app).</li>
 <li>Open door hinge switch.</li>
 <li>Press service mode button to enter service mode.</li>
