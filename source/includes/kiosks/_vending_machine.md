@@ -34,7 +34,7 @@ If the kiosk hardware is housed separately from the vending machine, then a rigi
 
 If the kiosk hardware is housed inside the vending machine, then the ipad will take up some of the opening space, but a rigid board with graphics must be created to close the rest of the opening.
 
-### Scrubs Inventory
+## Scrubs Inventory
 
 Once Scrubs are purchased in bulk, they need to be unpackaged, folded into the correct dimensions, and put into the appropriately sized bag in order to fit into the vending machine. Optionally, the bag then needs to be stickered with the company's logo.
 
@@ -44,7 +44,7 @@ Once Scrubs are purchased in bulk, they need to be unpackaged, folded into the c
 
 <img src='images/vending_machine_wiring.png' />
 
-### Setup
+## Setup
 
 Help videos:
 
@@ -117,7 +117,7 @@ Instructions:
   * Mount the airconsole mino under the MDB2PC board using velcro strips.
   * Connect the ethernet cable that was previously run from the airport express to the airconsole mini.
 
-### Airconsole Mini Set Instructions
+## Airconsole Mini Set Instructions
 
 1. Open Airport Utility and edit the kiosk router.
 2. Under the "Internet" tab, configure DHCP to serve addresses from `192.168.10.50` to `192.168.10.200`.
@@ -132,7 +132,7 @@ Instructions:
 6. Under the "Internet" tab, configure DHCP to serve addresses from `10.0.1.50` to `10.0.1.200`.
 7. Open `http://10.0.1.10` in the browser to confirm the airconsole mini has the correct address.
 
-### Put the Vending Machine is "Free Vend" mode
+## Put the Vending Machine is "Free Vend" mode
 
 1. Put vending machine in “Free Vend” mode.
 2. Plug in number pad to control board (or use the ipad app).
