@@ -264,6 +264,7 @@
 <li><a href='#get-all-vendors' class='toc-h2 toc-link' data-title='Get All Vendors'>Get All Vendors</a></li>
 <li><a href='#get-a-specific-vendor' class='toc-h2 toc-link' data-title='Get a Specific Vendor'>Get a Specific Vendor</a></li>
 <li><a href='#update-a-specific-vendor' class='toc-h2 toc-link' data-title='Update a Specific Vendor'>Update a Specific Vendor</a></li>
+<li><a href='#send-sample-webhooks' class='toc-h2 toc-link' data-title='Send Sample Webhooks'>Send Sample Webhooks</a></li>
 </ul>
 </li>
 <li><a href='#zones' class='toc-h1 toc-link' data-title='Zones'>Zones</a>
@@ -1235,6 +1236,70 @@ You must replace <code>mytoken</code> with your personal API key.
 <tr>
 <td>qr_code</td>
 <td>The new QR code for the vendor</td>
+</tr>
+</tbody></table>
+<h2 id='send-sample-webhooks'>Send Sample Webhooks</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/vendors/23/post-green-webhook?token=mytoken&amp;webhook=hard_badge_credential_updated"</span>
+  -X POST
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Or if there was an error:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint sends a sample webhook to the green web service.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST https://repconnex.com/api/vendors/&lt;vendor_id&gt;/post-green-webhook</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the credential to update</td>
+</tr>
+<tr>
+<td>webhook</td>
+<td>The webhook that should be called</td>
+</tr>
+</tbody></table>
+<h3 id='webhooks-available'>Webhooks available</h3>
+<table><thead>
+<tr>
+<th>Webhook</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>hard_badge_credential_uploaded</td>
+<td>Triggered when the hard badge credential is uploaded</td>
+</tr>
+<tr>
+<td>hard_badge_credential_approved</td>
+<td>Triggered when the hard badge credential is approved</td>
+</tr>
+<tr>
+<td>background_check_credential_uploaded</td>
+<td>Triggered when the background check credential is uploaded</td>
+</tr>
+<tr>
+<td>background_check_credential_approved</td>
+<td>Triggered when the background check credential is uploaded</td>
+</tr>
+<tr>
+<td>vendor_ssn</td>
+<td>Triggered when the vendor enters a social security number</td>
 </tr>
 </tbody></table>
 <h1 id='zones'>Zones</h1><h2 id='get-a-specific-zone'>Get a Specific Zone</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/zones/15?token=mytoken"</span>
