@@ -116,3 +116,29 @@ Instructions:
   * Connect the airconsole mini to the RJ45 adapter.
   * Mount the airconsole mino under the MDB2PC board using velcro strips.
   * Connect the ethernet cable that was previously run from the airport express to the airconsole mini.
+
+### Airconsole Mini Set Instructions
+
+1. Open Airport Utility and edit the kiosk router.
+2. Under the "Internet" tab, configure DHCP to serve addresses from `192.168.10.50` to `192.168.10.200`.
+3. Using a browser, open the airconsole mini at `http://192.168.10.1`.
+4. Under the "LAN" tab:
+ * Turn off DHCP.
+ * Change IP address: `10.0.1.10`
+ * Change router: `10.0.1.1`
+ * Change subnet mask: `255.255.255.0`
+ * Apply settings.
+5. Open Airport Utility and edit the kiosk router again.
+6. Under the "Internet" tab, configure DHCP to serve addresses from `10.0.1.50` to `10.0.1.200`.
+7. Open `http://10.0.1.10` in the browser to confirm the airconsole mini has the correct address.
+
+### Put the Vending Machine is "Free Vend" mode
+
+1. Put vending machine in “Free Vend” mode.
+2. Plug in number pad to control board (or use the ipad app).
+3. Open door hinge switch.
+4. Press service mode button to enter service mode.
+5. Press “#” to scroll through menu until “FREE VEND” is reached.
+6. Press “1” to VIEW / EDIT and then to toggle between Y and N.
+7. Press “#” to Save the setting and exit.
+8. Close door hinge switch.
