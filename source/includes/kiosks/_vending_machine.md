@@ -13,10 +13,11 @@
 | <a href='https://www.apple.com/airport-express/'>Apple Airport router (Express)</a> | 1 | Connects the ipad and vending machine to the network |
 | <a href='https://www.amazon.com/gp/product/B01F2O3CKI'>iPad Security Mount</a> | 1 | Used to hold the iPad |
 | <a href='https://www.amazon.com/gp/product/B01ACOR2PE'>Tilting wall bracket</a> | 1 | Used to attach the ipad to the wooden panel and to allow the ipad to tilt up and down for easy viewing |
-| <a href='https://www.bestbuy.com/site/wemo-wemo-insight-plug-white-gray/2300063.p'>Wemo power switch</a> | 1 | Allows us to hard reset everything remotely |
+| <a href='https://www.bestbuy.com/site/wemo-wemo-insight-plug-white-gray/2300063.p'>Wemo power switch</a> | 1 | Allows printer and router to be hard reset remotely |
 | Generic power strip | 1 |  |
 | <a href='https://www.amazon.com/gp/product/B002HVYVNC'>Power cord to PC connector adapter</a> | 1 | Connects the power strip to the internal vending machine power |
 | 3-wire 8' extension cord | 2 | Used to get power from the main power strip to the door assembly and interior assembly |  
+| <a href='https://www.amazon.com/gp/product/B00P0E3954'>1.5' A to A USB Cable</a> | 1 | Connects the airconsole mini to the Upstate board |
 | 50' ethernet cable | 1 | Used to connect the router to the network |
 | 25' ethernet cable | 1 | Used to connect the router to the airconsole mini |
 | 34" x 7" x 1/2" wooden panel | 1 | Used to cover cavity from original vending machine controls |
@@ -58,7 +59,7 @@ Instructions:
 1. Remove uneccesary parts.
   * Remove the plastic exterior piece with the number pad and anything attached to it except the small display and number pad board (both of which are attached via ribbon cables to the control board). Leave the display and number pad hanging for the time being.
   * Remove the metal change mechanism located on the inside of the machine. This will not be used and just takes up room.
-  * Remove the interior metal door (despite what the video shows). This door is no longer necessary since we're using a wood panel to cover the hole left by the removal of the normal vending machine controls.
+  * Remove the interior metal door (despite what the video shows). This door is no longer necessary since a wooden panel is being used to cover the hole left by the removal of the normal vending machine controls.
      - Unplug the two connectors that go to the switch at the top of the door.
      - Remove the door and hinges.
      - Remove the switch from the door.
@@ -128,7 +129,7 @@ The airport express router connects all of the components within the kiosk and v
 
 ## Airconsole Mini
 
-The airconsole mini acts as an interface between the network and the Upstate board, allowing us to send RS232 commands through the network.
+The airconsole mini acts as an interface between the network and the Upstate board, allowing RS232 commands to be sent through the network.
 
 Out of the box, the airconsole mini is configured with a `196.168` IP address which needs to be changed.
 
