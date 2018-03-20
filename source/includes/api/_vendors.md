@@ -186,6 +186,42 @@ Parameter | Description
 id | The id of the credential to update
 qr_code | The new QR code for the vendor
 
+## Add a Vendor
+
+```shell
+curl "https://repconnex.com/api/vendors?token=mytoken"
+  -X POST
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "success": true,
+  "vendor_id": 23
+}
+```
+
+> Or if there was an error:
+
+```json
+{
+  "error": "Explanation of error"
+}
+```
+
+This endpoint adds a new vendor.
+
+### HTTP Request
+
+`POST https://repconnex.com/api/vendors`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+email | The email address for the new vendor
+
 ## Send Sample Webhooks
 
 ```shell
