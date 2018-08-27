@@ -237,7 +237,8 @@
 <li><a href='#facilities' class='toc-h1 toc-link' data-title='Facilities'>Facilities</a>
 <ul class='toc-list-h2'>
 <li><a href='#get-all-facilities' class='toc-h2 toc-link' data-title='Get All Facilities'>Get All Facilities</a></li>
-<li><a href='#get-a-specific-company' class='toc-h2 toc-link' data-title='Get a Specific Company'>Get a Specific Company</a></li>
+<li><a href='#get-a-specific-facility' class='toc-h2 toc-link' data-title='Get a Specific Facility'>Get a Specific Facility</a></li>
+<li><a href='#send-text-alerts-to-facility-contacts' class='toc-h2 toc-link' data-title='Send text alerts to facility contacts'>Send text alerts to facility contacts</a></li>
 </ul>
 </li>
 <li><a href='#target-facilities' class='toc-h1 toc-link' data-title='Target Facilities'>Target Facilities</a>
@@ -568,7 +569,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>The status of the facility.</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-specific-company'>Get a Specific Company</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities/2?token=mytoken"</span>
+<h2 id='get-a-specific-facility'>Get a Specific Facility</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities/2?token=mytoken"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -614,6 +615,44 @@ You must replace <code>mytoken</code> with your personal API key.
 <tr>
 <td>id</td>
 <td>The id of the facility to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='send-text-alerts-to-facility-contacts'>Send text alerts to facility contacts</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="s2">"https://repconnex.com/api/facilities/2/alert-contacts-via-text?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"There was an error."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">or</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint sends a given text message body to contacts who would normally receive alerts of a given type.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST https://repconnex.com/api/facilities/&lt;id&gt;/alert-contacts-via-text</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the facility to retrieve</td>
+</tr>
+<tr>
+<td>alert_type</td>
+<td>The type of alert for which contacts would normally receive texts. Valid strings are &#39;vendor_scan&#39;, &#39;watchlist&#39;, &#39;sex_offender&#39;, and &#39;emergency&#39;</td>
+</tr>
+<tr>
+<td>message_body</td>
+<td>The message body to send</td>
 </tr>
 </tbody></table>
 <h1 id='target-facilities'>Target Facilities</h1>
