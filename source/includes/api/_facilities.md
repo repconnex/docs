@@ -170,6 +170,6 @@ This endpoint sends a given text message body to contacts who would normally rec
 
 Parameter | Description
 --------- | -----------
-id | The id of the facility to retrieve
+id | The id of the facility to whose contact you want to send the message
 alert_type | The type of alert for which contacts would normally receive texts. Valid strings are 'vendor_scan', 'watchlist', 'sex_offender', and 'emergency'
 message_body | The message body to send
