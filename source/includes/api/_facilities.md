@@ -90,7 +90,7 @@ fax_like | null | A search string to be used when matching the facility fax.
 website_like | null | A search string to be used when matching the facility website.
 status | null | The status of the facility.
 
-## Get a Specific Company
+## Get a Specific Facility
 
 ```shell
 curl "https://repconnex.com/api/facilities/2?token=mytoken"
@@ -139,3 +139,37 @@ This endpoint retrieves a specific facility.
 Parameter | Description
 --------- | -----------
 id | The id of the facility to retrieve
+
+## Send text alerts to facility contacts
+
+```shell
+curl -X POST "https://repconnex.com/api/facilities/2/alert-contacts-via-text?token=mytoken"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "error": "There was an error."
+}
+
+or
+
+{
+  "success": true
+}
+```
+
+This endpoint sends a given text message body to contacts who would normally receive alerts of a given type.
+
+### HTTP Request
+
+`POST https://repconnex.com/api/facilities/<id>/alert-contacts-via-text`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+id | The id of the facility to retrieve
+alert_type | The type of alert for which contacts would normally receive texts. Valid strings are 'vendor_scan', 'watchlist', 'sex_offender', and 'emergency'
+message_body | The message body to send
