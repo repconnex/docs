@@ -271,6 +271,7 @@
 </li>
 <li><a href='#zones' class='toc-h1 toc-link' data-title='Zones'>Zones</a>
 <ul class='toc-list-h2'>
+<li><a href='#get-a-list-of-zones' class='toc-h2 toc-link' data-title='Get a List of Zones'>Get a List of Zones</a></li>
 <li><a href='#get-a-specific-zone' class='toc-h2 toc-link' data-title='Get a Specific Zone'>Get a Specific Zone</a></li>
 <li><a href='#check-whether-a-vendor-may-enter-a-zone' class='toc-h2 toc-link' data-title='Check whether a vendor may enter a zone'>Check whether a vendor may enter a zone</a></li>
 </ul>
@@ -1375,7 +1376,54 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>Triggered when the vendor enters a social security number</td>
 </tr>
 </tbody></table>
-<h1 id='zones'>Zones</h1><h2 id='get-a-specific-zone'>Get a Specific Zone</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/zones/15?token=mytoken"</span>
+<h1 id='zones'>Zones</h1><h2 id='get-a-list-of-zones'>Get a List of Zones</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/zones?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zone 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"East entrance to the hospital"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">124</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zone 2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"West entrance to the hospital"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of zones.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/zones</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>facility_id</td>
+<td>The facility id of the zones.</td>
+</tr>
+<tr>
+<td>green_location_id</td>
+<td>The green location id of the zones.</td>
+</tr>
+<tr>
+<td>name_like</td>
+<td>A substring search of the name of a zone.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-zone'>Get a Specific Zone</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/zones/15?token=mytoken"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1389,9 +1437,9 @@ You must replace <code>mytoken</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific zone.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://repconnex.com/api/zones/&lt;id&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1411,6 +1459,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The vendor is not credentialed at the facility"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"has_appointment"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -1421,9 +1470,9 @@ You must replace <code>mytoken</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint checks whether a vendor may enter a zone.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://repconnex.com/api/zones/&lt;zone_id&gt;/vendors/&lt;vendor_id&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
