@@ -269,11 +269,11 @@
 <li><a href='#send-sample-webhooks' class='toc-h2 toc-link' data-title='Send Sample Webhooks'>Send Sample Webhooks</a></li>
 </ul>
 </li>
-<li><a href='#vendors' class='toc-h1 toc-link' data-title='Vendors'>Vendors</a>
+<li><a href='#visitor-checkins' class='toc-h1 toc-link' data-title='Visitor Checkins'>Visitor Checkins</a>
 <ul class='toc-list-h2'>
 <li><a href='#get-a-specific-visitor-checkin' class='toc-h2 toc-link' data-title='Get a Specific Visitor Checkin'>Get a Specific Visitor Checkin</a></li>
 <li><a href='#update-a-specific-visitor-checkin' class='toc-h2 toc-link' data-title='Update a Specific Visitor Checkin'>Update a Specific Visitor Checkin</a></li>
-<li><a href='#add-a-vendor' class='toc-h2 toc-link' data-title='Add a Vendor'>Add a Vendor</a></li>
+<li><a href='#add-a-visitor-checkin' class='toc-h2 toc-link' data-title='Add a Visitor Checkin'>Add a Visitor Checkin</a></li>
 </ul>
 </li>
 <li><a href='#zones' class='toc-h1 toc-link' data-title='Zones'>Zones</a>
@@ -1383,7 +1383,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>Triggered when the vendor enters a social security number</td>
 </tr>
 </tbody></table>
-<h1 id='vendors'>Vendors</h1><h2 id='get-a-specific-visitor-checkin'>Get a Specific Visitor Checkin</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/visitor-checkins/23?token=mytoken"</span>
+<h1 id='visitor-checkins'>Visitor Checkins</h1><h2 id='get-a-specific-visitor-checkin'>Get a Specific Visitor Checkin</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/visitor-checkins/23?token=mytoken"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1452,7 +1452,7 @@ You must replace <code>mytoken</code> with your personal API key.
   </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint updates a specific vendor.</p>
+<p>This endpoint updates a specific visitor checkin.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>PUT https://repconnex.com/api/visitor-checkins/&lt;visitor_checkin_id&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
@@ -1579,7 +1579,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>Self explanatory</td>
 </tr>
 </tbody></table>
-<h2 id='add-a-vendor'>Add a Vendor</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/visitor-checkins?token=mytoken"</span>
+<h2 id='add-a-visitor-checkin'>Add a Visitor Checkin</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/visitor-checkins?token=mytoken"</span>
   -X POST
 </code></pre>
 <blockquote>
@@ -1597,7 +1597,7 @@ You must replace <code>mytoken</code> with your personal API key.
   </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint adds a new vendor.</p>
+<p>This endpoint adds a new visitor checkin.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>POST https://repconnex.com/api/visitor-checkins</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
