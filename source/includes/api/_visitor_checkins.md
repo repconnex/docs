@@ -1,4 +1,4 @@
-# Vendors
+# Visitor Checkins
 
 ## Get a Specific Visitor Checkin
 
@@ -77,7 +77,7 @@ curl "https://repconnex.com/api/visitor-checkins/23?token=mytoken"
 }
 ```
 
-This endpoint updates a specific vendor.
+This endpoint updates a specific visitor checkin.
 
 ### HTTP Request
 
@@ -117,7 +117,7 @@ user_watchlist_hit_print     | Self explanatory
 user_watchlist_possible_hit  | Self explanatory
 watchdog_print               | Self explanatory
 
-## Add a Vendor
+## Add a Visitor Checkin
 
 ```shell
 curl "https://repconnex.com/api/visitor-checkins?token=mytoken"
@@ -141,7 +141,7 @@ curl "https://repconnex.com/api/visitor-checkins?token=mytoken"
 }
 ```
 
-This endpoint adds a new vendor.
+This endpoint adds a new visitor checkin.
 
 ### HTTP Request
 
