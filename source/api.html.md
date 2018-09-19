@@ -20,6 +20,7 @@ includes:
   - api/users
   - api/vendor_credentials
   - api/vendors
+  - api/visitor_checkins
   - api/zones
   - api/paging
   - api/searching  
