@@ -16,6 +16,7 @@ includes:
   - api/companies
   - api/credentials
   - api/facilities
+  - api/mobile_devices
   - api/target_facilities
   - api/users
   - api/vendor_credentials
