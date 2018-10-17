@@ -38,7 +38,8 @@ curl "https://repconnex.com/api/visitor-checkins/23?token=mytoken"
   "watchdog_offender_id": null,
   "user_watchlist_hit_print": false,
   "user_watchlist_possible_hit": false,
-  "watchdog_print": false  
+  "watchdog_print": false,
+  "notes": null
 }
 ```
 
@@ -100,6 +101,9 @@ dl_front                     | Self explanatory
 dl_back                      | Self explanatory
 dl_parsed_barcode            | Self explanatory
 face                         | Self explanatory
+dl_front_base64              | Self explanatory
+dl_back_base64               | Self explanatory
+face_base64                  | Self explanatory
 green_visit_id               | Self explanatory
 facility_id                  | Self explanatory
 checkin_zone_id              | Self explanatory
@@ -116,6 +120,7 @@ watchdog_offender_id         | Self explanatory
 user_watchlist_hit_print     | Self explanatory
 user_watchlist_possible_hit  | Self explanatory
 watchdog_print               | Self explanatory
+notes                        | Self explanatory
 
 ## Add a Visitor Checkin
 
@@ -163,6 +168,9 @@ dl_front                     | Self explanatory
 dl_back                      | Self explanatory
 dl_parsed_barcode            | Self explanatory
 face                         | Self explanatory
+dl_front_base64              | Self explanatory
+dl_back_base64               | Self explanatory
+face_base64                  | Self explanatory
 green_visit_id               | Self explanatory
 facility_id                  | Self explanatory
 checkin_zone_id              | Self explanatory
@@ -179,3 +187,4 @@ watchdog_offender_id         | Self explanatory
 user_watchlist_hit_print     | Self explanatory
 user_watchlist_possible_hit  | Self explanatory
 watchdog_print               | Self explanatory
+notes                        | Self explanatory
