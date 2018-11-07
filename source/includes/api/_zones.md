@@ -109,3 +109,4 @@ Parameter | Description
 --------- | -----------
 zone_id | The id of the zone
 vendor_id | The id of the vendor
+scan_type | (Optional) 0 for In, 1 for Out, 2 for Spot Check 
