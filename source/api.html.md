@@ -22,6 +22,7 @@ includes:
   - api/vendor_credentials
   - api/vendors
   - api/visitor_checkins
+  - api/watchlist_entries
   - api/zones
   - api/paging
   - api/searching  

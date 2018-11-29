@@ -1,5 +1,34 @@
 # Visitor Checkins
 
+## Get a list of Visitor Checkins
+
+```shell
+curl "https://repconnex.com/api/visitor-checkins?token=mytoken"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "pager": [Object],
+  "items": [Array of Visitor Checkin objects]
+}
+```
+
+This endpoint retrieves a list of visitor checkins.
+
+### HTTP Request
+
+`GET https://repconnex.com/api/visitor-checkins`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+facility_id | The facility id of the visitor checkin
+first_name_like | A substring search of the first name
+last_name_like | A substring search of the last name
+
 ## Get a Specific Visitor Checkin
 
 ```shell
