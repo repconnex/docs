@@ -84,6 +84,31 @@ Parameter | Description
 --------- | -----------
 id | The id of the visitor checkin to retrieve
 
+## Get the Dymo Label for a Specific Visitor Checkin
+
+```shell
+curl "https://repconnex.com/api/visitor-checkins/23/label?token=mytoken"
+```
+
+> The above command returns JSON structured like this:
+
+```text
+<?xml...
+</xml>
+```
+
+This endpoint retrieves the dymo label for a specific visitor checkin.
+
+### HTTP Request
+
+`GET https://repconnex.com/api/visitor-checkins/<id>/label`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+id | The id of the visitor checkin
+
 ## Update a Specific Visitor Checkin
 
 ```shell
