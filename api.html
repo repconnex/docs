@@ -278,7 +278,16 @@
 </li>
 <li><a href='#visitor-checkins' class='toc-h1 toc-link' data-title='Visitor Checkins'>Visitor Checkins</a>
 <ul class='toc-list-h2'>
+<li><a href='#get-a-list-of-visitor-checkins' class='toc-h2 toc-link' data-title='Get a list of Visitor Checkins'>Get a list of Visitor Checkins</a></li>
 <li><a href='#get-a-specific-visitor-checkin' class='toc-h2 toc-link' data-title='Get a Specific Visitor Checkin'>Get a Specific Visitor Checkin</a></li>
+<li><a href='#update-a-specific-visitor-checkin' class='toc-h2 toc-link' data-title='Update a Specific Visitor Checkin'>Update a Specific Visitor Checkin</a></li>
+<li><a href='#add-a-visitor-checkin' class='toc-h2 toc-link' data-title='Add a Visitor Checkin'>Add a Visitor Checkin</a></li>
+</ul>
+</li>
+<li><a href='#watchlist-entries' class='toc-h1 toc-link' data-title='Watchlist Entries'>Watchlist Entries</a>
+<ul class='toc-list-h2'>
+<li><a href='#get-a-list-of-watchlist-entries' class='toc-h2 toc-link' data-title='Get a list of watchlist entries'>Get a list of watchlist entries</a></li>
+<li><a href='#get-a-specific-watchlist-entry' class='toc-h2 toc-link' data-title='Get a Specific Watchlist Entry'>Get a Specific Watchlist Entry</a></li>
 <li><a href='#update-a-specific-visitor-checkin' class='toc-h2 toc-link' data-title='Update a Specific Visitor Checkin'>Update a Specific Visitor Checkin</a></li>
 <li><a href='#add-a-visitor-checkin' class='toc-h2 toc-link' data-title='Add a Visitor Checkin'>Add a Visitor Checkin</a></li>
 </ul>
@@ -1499,7 +1508,40 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>Triggered when the vendor enters a social security number</td>
 </tr>
 </tbody></table>
-<h1 id='visitor-checkins'>Visitor Checkins</h1><h2 id='get-a-specific-visitor-checkin'>Get a Specific Visitor Checkin</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/visitor-checkins/23?token=mytoken"</span>
+<h1 id='visitor-checkins'>Visitor Checkins</h1><h2 id='get-a-list-of-visitor-checkins'>Get a list of Visitor Checkins</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/visitor-checkins?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"pager"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">Visitor</span><span class="w"> </span><span class="err">Checkin</span><span class="w"> </span><span class="err">objects</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of visitor checkins.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/visitor-checkins</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>facility_id</td>
+<td>The facility id of the visitor checkin</td>
+</tr>
+<tr>
+<td>first_name_like</td>
+<td>A substring search of the first name</td>
+</tr>
+<tr>
+<td>last_name_like</td>
+<td>A substring search of the last name</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-visitor-checkin'>Get a Specific Visitor Checkin</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/visitor-checkins/23?token=mytoken"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1538,9 +1580,9 @@ You must replace <code>mytoken</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific visitor checkin.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://repconnex.com/api/visitor-checkins/&lt;id&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1570,9 +1612,9 @@ You must replace <code>mytoken</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint updates a specific visitor checkin.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>PUT https://repconnex.com/api/visitor-checkins/&lt;visitor_checkin_id&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1731,9 +1773,9 @@ You must replace <code>mytoken</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint adds a new visitor checkin.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://repconnex.com/api/visitor-checkins</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
+<h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1867,6 +1909,229 @@ You must replace <code>mytoken</code> with your personal API key.
 <tr>
 <td>notes</td>
 <td>Self explanatory</td>
+</tr>
+</tbody></table>
+<h1 id='watchlist-entries'>Watchlist Entries</h1><h2 id='get-a-list-of-watchlist-entries'>Get a list of watchlist entries</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"pager"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">watchlist</span><span class="w"> </span><span class="err">entry</span><span class="w"> </span><span class="err">objects</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of watchlist entries.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>watchlist_id</td>
+<td>The watchlist ID to search.</td>
+</tr>
+<tr>
+<td>first_name_like</td>
+<td>A substring search of the first name.</td>
+</tr>
+<tr>
+<td>last_name_like</td>
+<td>A substring search of the last name.</td>
+</tr>
+<tr>
+<td>address1_like</td>
+<td>A substring search of the address1.</td>
+</tr>
+<tr>
+<td>address2_like</td>
+<td>A substring search of the address2.</td>
+</tr>
+<tr>
+<td>dob_lte</td>
+<td>A maximum (inclusive) value of the DOB.</td>
+</tr>
+<tr>
+<td>dob_gte</td>
+<td>A minimum (inclusive) value of the DOB.</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>An exact search of the gender.</td>
+</tr>
+<tr>
+<td>eye_color_like</td>
+<td>A substring search of the eye color.</td>
+</tr>
+<tr>
+<td>notes_like</td>
+<td>A susbtring search of the notes.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-watchlist-entry'>Get a Specific Watchlist Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries/&lt;watchlist_entry_id&gt;?token=mytoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"watchlist_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1515 Oak Lane"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"dob"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1975-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Male"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eye_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">          
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific watchlist entry.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries/&lt;watchlist_entry_id&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the watchlist entry to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-specific-visitor-checkin'>Update a Specific Visitor Checkin</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries/&lt;watchlist_entry_id&gt;?token=mytoken"</span>
+  -X PUT
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Or if there was an error:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates a specific watchlist entry.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries/&lt;watchlist_entry_id&gt;</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the credential to update</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>First name</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>Last name</td>
+</tr>
+<tr>
+<td>address1</td>
+<td>Address1</td>
+</tr>
+<tr>
+<td>address2</td>
+<td>Address2</td>
+</tr>
+<tr>
+<td>dob</td>
+<td>Date of Birth</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Gender</td>
+</tr>
+<tr>
+<td>eye_color</td>
+<td>Eye color</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>Notes</td>
+</tr>
+</tbody></table>
+<h2 id='add-a-visitor-checkin'>Add a Visitor Checkin</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries?token=mytoken"</span>
+  -X POST
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"watchlist_entry_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Or if there was an error:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explanation of error"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint adds a new watchlist entry.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST https://repconnex.com/api/&lt;facility_id&gt;/watchlists/&lt;watchlist_id&gt;/entries</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>watchlist_id</td>
+<td>Watchlist ID</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>First name</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>Last name</td>
+</tr>
+<tr>
+<td>address1</td>
+<td>Address1</td>
+</tr>
+<tr>
+<td>address2</td>
+<td>Address2</td>
+</tr>
+<tr>
+<td>dob</td>
+<td>Date of birth</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Gender</td>
+</tr>
+<tr>
+<td>eye_color</td>
+<td>Eye color</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>Notes</td>
 </tr>
 </tbody></table>
 <h1 id='zones'>Zones</h1><h2 id='get-a-list-of-zones'>Get a List of Zones</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/zones?token=mytoken"</span>
