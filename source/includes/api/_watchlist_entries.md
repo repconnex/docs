@@ -3,7 +3,7 @@
 ## Get a list of watchlist entries
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries?token=mytoken"
+curl "https://repconnex.com/api/<facility_id>/watchlist-entries?token=mytoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -19,7 +19,7 @@ This endpoint retrieves a list of watchlist entries.
 
 ### HTTP Request
 
-`GET https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries`
+`GET https://repconnex.com/api/<facility_id>/watchlist-entries`
 
 ### URL Parameters
 
@@ -39,7 +39,7 @@ notes_like      | A susbtring search of the notes.
 ## Get a Specific Watchlist Entry
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries/<watchlist_entry_id>?token=mytoken"
+curl "https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>?token=mytoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -55,7 +55,8 @@ curl "https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries/
   "dob": "1975-01-01",
   "gender": "Male",
   "eye_color": "Brown",
-  "notes": null          
+  "notes": null,
+  "image": null
 }
 ```
 
@@ -63,7 +64,7 @@ This endpoint retrieves a specific watchlist entry.
 
 ### HTTP Request
 
-`GET https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries/<watchlist_entry_id>`
+`GET https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>`
 
 ### URL Parameters
 
@@ -71,10 +72,10 @@ Parameter | Description
 --------- | -----------
 id | The id of the watchlist entry to retrieve
 
-## Update a Specific Visitor Checkin
+## Update a Specific Watchlist Entry
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries/<watchlist_entry_id>?token=mytoken"
+curl "https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>?token=mytoken"
   -X PUT
 ```
 
@@ -98,26 +99,28 @@ This endpoint updates a specific watchlist entry.
 
 ### HTTP Request
 
-`PUT https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries/<watchlist_entry_id>`
+`PUT https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-id         | The id of the credential to update
-first_name | First name
-last_name  | Last name
-address1   | Address1
-address2   | Address2
-dob        | Date of Birth
-gender     | Gender
-eye_color  | Eye color
-notes      | Notes
+id           | The id of the credential to update
+watchlist_id | Watchlist ID
+first_name   | First name
+last_name    | Last name
+address1     | Address1
+address2     | Address2
+dob          | Date of Birth
+gender       | Gender
+eye_color    | Eye color
+notes        | Notes
+image        | Base64-encoded image
 
-## Add a Visitor Checkin
+## Add a Watchlist Entry
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries?token=mytoken"
+curl "https://repconnex.com/api/<facility_id>/watchlist-entries?token=mytoken"
   -X POST
 ```
 
@@ -142,7 +145,7 @@ This endpoint adds a new watchlist entry.
 
 ### HTTP Request
 
-`POST https://repconnex.com/api/<facility_id>/watchlists/<watchlist_id>/entries`
+`POST https://repconnex.com/api/<facility_id>/watchlist-entries`
 
 ### URL Parameters
 
@@ -157,4 +160,4 @@ dob          | Date of birth
 gender       | Gender
 eye_color    | Eye color
 notes        | Notes
-  
+image        | Base64-encoded image
