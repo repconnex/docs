@@ -109,6 +109,31 @@ Parameter | Description
 --------- | -----------
 id | The id of the visitor checkin
 
+## Get the Dymo Label for a Specific Facility
+
+```shell
+curl "https://repconnex.com/api/visitor-checkins/facilities/<facility_id>/label?token=mytoken"
+```
+
+> The above command returns JSON structured like this:
+
+```text
+<?xml...
+</xml>
+```
+
+This endpoint retrieves the dymo label for a specific visitor checkin.
+
+### HTTP Request
+
+`GET https://repconnex.com/api/visitor-checkins/facilities/<facility_id>/label`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+facility_id | The facility ID
+
 ## Update a Specific Visitor Checkin
 
 ```shell
