@@ -1935,7 +1935,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>Self explanatory</td>
 </tr>
 </tbody></table>
-<h1 id='watchlist-entries'>Watchlist Entries</h1><h2 id='get-a-list-of-watchlist-entries'>Get a list of watchlist entries</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries?token=mytoken"</span>
+<h1 id='watchlist-entries'>Watchlist Entries</h1><h2 id='get-a-list-of-watchlist-entries'>Get a list of watchlist entries</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries?token=mytoken"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1947,7 +1947,7 @@ You must replace <code>mytoken</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves a list of watchlist entries.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries</code></p>
+<p><code>GET https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1996,7 +1996,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>A susbtring search of the notes.</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-specific-watchlist-entry'>Get a Specific Watchlist Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;?token=mytoken"</span>
+<h2 id='get-a-specific-watchlist-entry'>Get a Specific Watchlist Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;?token=mytoken"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -2017,7 +2017,7 @@ You must replace <code>mytoken</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves a specific watchlist entry.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;</code></p>
+<p><code>GET https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -2030,7 +2030,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>The id of the watchlist entry to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='update-a-specific-watchlist-entry'>Update a Specific Watchlist Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;?token=mytoken"</span>
+<h2 id='update-a-specific-watchlist-entry'>Update a Specific Watchlist Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;?token=mytoken"</span>
   -X PUT
 </code></pre>
 <blockquote>
@@ -2049,7 +2049,7 @@ You must replace <code>mytoken</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint updates a specific watchlist entry.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;</code></p>
+<p><code>PUT https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries/&lt;watchlist_entry_id&gt;</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -2102,7 +2102,7 @@ You must replace <code>mytoken</code> with your personal API key.
 <td>Base64-encoded image</td>
 </tr>
 </tbody></table>
-<h2 id='add-a-watchlist-entry'>Add a Watchlist Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries?token=mytoken"</span>
+<h2 id='add-a-watchlist-entry'>Add a Watchlist Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries?token=mytoken"</span>
   -X POST
 </code></pre>
 <blockquote>
@@ -2122,7 +2122,7 @@ You must replace <code>mytoken</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint adds a new watchlist entry.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://repconnex.com/api/&lt;facility_id&gt;/watchlist-entries</code></p>
+<p><code>POST https://repconnex.com/api/facilities/&lt;facility_id&gt;/watchlist-entries</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
