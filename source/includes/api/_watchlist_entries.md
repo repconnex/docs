@@ -3,7 +3,7 @@
 ## Get a list of watchlist entries
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlist-entries?token=mytoken"
+curl "https://repconnex.com/api/facilities/<facility_id>/watchlist-entries?token=mytoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -19,7 +19,7 @@ This endpoint retrieves a list of watchlist entries.
 
 ### HTTP Request
 
-`GET https://repconnex.com/api/<facility_id>/watchlist-entries`
+`GET https://repconnex.com/api/facilities/<facility_id>/watchlist-entries`
 
 ### URL Parameters
 
@@ -39,7 +39,7 @@ notes_like      | A susbtring search of the notes.
 ## Get a Specific Watchlist Entry
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>?token=mytoken"
+curl "https://repconnex.com/api/facilities/<facility_id>/watchlist-entries/<watchlist_entry_id>?token=mytoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -64,7 +64,7 @@ This endpoint retrieves a specific watchlist entry.
 
 ### HTTP Request
 
-`GET https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>`
+`GET https://repconnex.com/api/facilities/<facility_id>/watchlist-entries/<watchlist_entry_id>`
 
 ### URL Parameters
 
@@ -75,7 +75,7 @@ id | The id of the watchlist entry to retrieve
 ## Update a Specific Watchlist Entry
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>?token=mytoken"
+curl "https://repconnex.com/api/facilities/<facility_id>/watchlist-entries/<watchlist_entry_id>?token=mytoken"
   -X PUT
 ```
 
@@ -99,7 +99,7 @@ This endpoint updates a specific watchlist entry.
 
 ### HTTP Request
 
-`PUT https://repconnex.com/api/<facility_id>/watchlist-entries/<watchlist_entry_id>`
+`PUT https://repconnex.com/api/facilities/<facility_id>/watchlist-entries/<watchlist_entry_id>`
 
 ### URL Parameters
 
@@ -120,7 +120,7 @@ image        | Base64-encoded image
 ## Add a Watchlist Entry
 
 ```shell
-curl "https://repconnex.com/api/<facility_id>/watchlist-entries?token=mytoken"
+curl "https://repconnex.com/api/facilities/<facility_id>/watchlist-entries?token=mytoken"
   -X POST
 ```
 
@@ -145,7 +145,7 @@ This endpoint adds a new watchlist entry.
 
 ### HTTP Request
 
-`POST https://repconnex.com/api/<facility_id>/watchlist-entries`
+`POST https://repconnex.com/api/facilities/<facility_id>/watchlist-entries`
 
 ### URL Parameters
 
