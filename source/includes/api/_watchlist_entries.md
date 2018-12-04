@@ -115,7 +115,7 @@ dob          | Date of Birth
 gender       | Gender
 eye_color    | Eye color
 notes        | Notes
-image        | Base64-encoded image
+image_base64 | Base64-encoded image
 
 ## Add a Watchlist Entry
 
@@ -160,4 +160,4 @@ dob          | Date of birth
 gender       | Gender
 eye_color    | Eye color
 notes        | Notes
-image        | Base64-encoded image
+image_base64 | Base64-encoded image
