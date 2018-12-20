@@ -140,10 +140,10 @@ Parameter | Description
 --------- | -----------
 id | The id of the facility to retrieve
 
-## Send text alerts to facility contacts
+## Send notifications to facility contacts
 
 ```shell
-curl -X POST "https://repconnex.com/api/facilities/2/alert-contacts-via-text?token=mytoken"
+curl -X POST "https://repconnex.com/api/facilities/2/alert-contacts?token=mytoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -160,16 +160,16 @@ or
 }
 ```
 
-This endpoint sends a given text message body to contacts who would normally receive alerts of a given type.
+This endpoint sends a given notification to contacts who would normally receive alerts of a given type. Notifications are sent using the contact's preferred method, text and/or email.
 
 ### HTTP Request
 
-`POST https://repconnex.com/api/facilities/<id>/alert-contacts-via-text`
+`POST https://repconnex.com/api/facilities/<id>/alert-contacts`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
 id | The id of the facility to whose contact you want to send the message
-alert_type | The type of alert for which contacts would normally receive texts. Valid strings are 'vendor_scan', 'watchlist', 'sex_offender', and 'emergency'
+alert_type | The type of alert for which contacts would normally receive texts. Valid strings are 'vendor scan', 'watchlist', 'sex offender', and 'emergency'
 message_body | The message body to send
