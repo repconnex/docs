@@ -150,6 +150,64 @@ Parameter | Description
 --------- | -----------
 id | The id of the vendor to retrieve
 
+## Get Vendors who Match Guest Duplicate Search
+
+```shell
+curl "https://repconnex.com/api/vendors/guest-duplicates?token=mytoken"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "vendors": [{
+    "id": 23,
+    "user_id": 57,                        
+    "company_id": 15,                    
+    "vendor_type_id": 4,                 
+    "vendor_category_id": 13,             
+    "supervisor_name": "John Doe",
+    "supervisor_email": "jdoe@gmail.com",
+    "supervisor_phone": "555-555-5555",
+    "vc_manager_email": "bobsmith@gmail.com",
+    "primary_sales_state": "UT",    
+    "title": "Directory of Sales",                          
+    "territory": "UT",                    
+    "authnet_profile_id": "abc123",             
+    "authnet_payment_id": "xyz456",             
+    "valid_authnet_payment_id": true,
+    "card_type": null,
+    "card_suffix": null,                    
+    "authnet_subscription_id": "def789",                           
+    "credentialing_subscription_id": 123,
+    "scrubs_subscription_id": 342,
+    "anniversary_date": "2016-01-30",                             
+    "federal": false,              
+    "notes": null,
+    "scrub_top_size": "M",                 
+    "scrub_bottom_size": "M",              
+    "scrub_color": "blue",
+    "qr_code": null,
+    "target_facilities": null
+  }]
+}
+```
+
+This endpoint retrieves vendors who match the guest duplicate search.
+
+### HTTP Request
+
+`GET https://repconnex.com/api/vendors/guest-duplicates`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+first_name  | The first name of the vendor
+last_name   | The last name of the vendor
+dob         | The date of birth of the vendor (in iso8601 format: 1979-12-31)
+facility_id | The facility ID
+
 ## Update a Specific Vendor
 
 ```shell
