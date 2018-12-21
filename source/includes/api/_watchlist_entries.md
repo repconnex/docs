@@ -72,6 +72,35 @@ Parameter | Description
 --------- | -----------
 id | The id of the watchlist entry to retrieve
 
+## Get a list of vendor guest duplicates
+
+```shell
+curl "https://repconnex.com/api/facilities/<facility_id>/vendor-guest-duplicates?token=mytoken"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "watchlist_entries": [Array of watchlist entry objects]
+}
+```
+
+This endpoint retrieves a list of watchlist entries that act as flags for vendor guest duplicates.
+
+### HTTP Request
+
+`GET https://repconnex.com/api/facilties/<facility_id>/vendor-guest-duplicates`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+first_name  | The first name of the vendor
+last_name   | The last name of the vendor
+dob         | The date of birth of the vendor (in iso8601 format: 1979-12-31)
+facility_id | The facility ID
+
 ## Update a Specific Watchlist Entry
 
 ```shell
