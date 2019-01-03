@@ -191,3 +191,4 @@ Parameter | Description
 --------- | -----------
 username | The username or email of the user
 password | The user's password
+site_id  | The ID of the site the user belongs to (defaults to 2, which is Green Security)
