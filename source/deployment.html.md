@@ -1,7 +1,7 @@
 ---
 title: Deployment
 
-main_nav_tab: Website
+main_nav_tab: Deployment
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
