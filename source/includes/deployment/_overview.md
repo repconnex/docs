@@ -6,7 +6,9 @@
 
 - While on feature branch, bring in changes from master
 
-  git merge --no-ff master
+```
+git merge --no-ff master
+```
   
 - Fix any merge conflicts and re-commit.
 
